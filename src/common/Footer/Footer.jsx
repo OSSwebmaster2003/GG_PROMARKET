@@ -84,13 +84,13 @@ function Footer(props) {
         </div>
       </div>
       <div className="middle_footer">
-        <div>
+        <div className='logo_part'>
           <Link>
             <img src="./assets/logo.png" alt="" />
           </Link>
           <p>© {new Date().getFullYear()} ggpromarket.ru</p>
         </div>
-        <div>
+        <div className='media_part'>
           <Link>
             <img src={whatsapp} alt="./" />
           </Link>
@@ -101,7 +101,7 @@ function Footer(props) {
             <img src={telegram} alt="./" />
           </Link>
         </div>
-        <div>
+        <div className='yandex_part'>
           <img src={yandex_map} alt="" />
         </div>
       </div>
