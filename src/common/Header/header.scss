@@ -1,0 +1,151 @@
+header {
+  background-color: #e1eefb;
+  padding: 26px calc((100% - 1540px) / 2);
+  .header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header_logo {
+      img {
+        width: 296px;
+        height: 33px;
+      }
+    }
+    .header_location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      svg {
+        width: 10px;
+        height: 13px;
+        color: yellowgreen;
+      }
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #2b7bc6;
+        margin: 0;
+        border-bottom: 1px dashed #2b7bc6;
+      }
+    }
+    .header_call {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 26px;
+        color: #000000;
+        margin: 0;
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        margin: 0;
+        svg {
+          width: 16px;
+          height: 16px;
+          color: yellowgreen;
+        }
+        a {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #2b7bc6;
+          border-bottom: 1px dashed #2b7bc6;
+          text-decoration: none;
+        }
+      }
+    }
+    .header_right {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        li {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2b7bc6;
+            transition: 0.3s linear all;
+            &:hover {
+              color: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  header {
+    padding: 26px 25px;
+  }
+}
+
+@media (max-width: 1600px) {
+  header {
+    .header_wrapper {
+      .header_location {
+        display: none;
+      }
+      .header_call {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  header {
+    padding: 26px 15px;
+    .header_wrapper {
+      .header_logo {
+        img {
+          width: 200px;
+          height: 27px;
+        }
+      }
+      .header_right {
+        ul {
+          gap: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  header {
+    padding: 15px 10px;
+    .header_wrapper {
+      .header_logo {
+        img {
+          width: 130px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
+// 580px gacha

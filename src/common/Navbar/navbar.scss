@@ -1,0 +1,270 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px calc((100% - 1540px) / 2);
+  background-color: #e1eefb;
+  .left_navbar {
+    width: 554px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    .catalog {
+      width: calc(100% - (121px + 137px));
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 21px;
+      background-color: #004c93;
+      cursor: pointer;
+      svg {
+        width: 24px;
+        height: 18px;
+        color: #fff;
+        path {
+          font-size: 24px;
+        }
+      }
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.15em;
+      color: #fbfaf9;
+      transition: 0.3s linear all;
+      &:hover {
+        background-color: yellowgreen;
+      }
+    }
+    .discounts {
+      width: 121px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1061ab;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.15em;
+      color: #fbfaf9;
+      cursor: pointer;
+      transition: 0.3s linear all;
+      &:hover {
+        background-color: yellowgreen;
+      }
+    }
+    .brands {
+      background: #2b7bc6;
+      width: 137px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.15em;
+      color: #fbfaf9;
+      cursor: pointer;
+      transition: 0.3s linear all;
+      &:hover {
+        background-color: yellowgreen;
+      }
+    }
+  }
+  .search_box {
+    width: calc(100% - (240px + 554px));
+    height: 60px;
+    background: #ffffff;
+    .search_wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      input {
+        width: calc(100% - 44px);
+        border: none;
+        outline: none;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #536067;
+        &::placeholder {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #536067;
+        }
+      }
+      button {
+        width: 24px;
+        height: 24px;
+        border: none;
+        outline: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #2b7bc6;
+        }
+      }
+    }
+  }
+  .right_navbar {
+    width: 240px;
+    height: 60px;
+    background: #f1f8ff;
+    .right_navbar_wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      a {
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  nav {
+    padding: 26px 25px;
+  }
+}
+@media (max-width: 1600px) {
+  nav {
+    .left_navbar {
+      width: 400px;
+      .catalog {
+        width: calc(100% - (85px + 100px));
+        gap: 8px;
+        font-size: 13px;
+      }
+      .discounts {
+        width: 85px;
+        font-size: 14px;
+      }
+      .brands {
+        width: 100px;
+        font-size: 14px;
+      }
+    }
+    .search_box {
+      width: calc(100% - (180px + 400px));
+    }
+    .right_navbar {
+      width: 180px;
+      .right_navbar_wrapper {
+        gap: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  nav {
+    .left_navbar {
+      width: 280px;
+      height: 45px;
+      .brands {
+        width: 65px;
+        font-size: 11px;
+        height: 45px;
+      }
+      .discounts {
+        width: 55px;
+        font-size: 11px;
+        height: 45px;
+      }
+      .catalog {
+        width: calc(100% - 120px);
+        font-size: 9px;
+        height: 45px;
+      }
+    }
+    .search_box {
+      height: 45px;
+      width: calc(100% - (120px + 280px));
+    }
+    .right_navbar {
+      width: 120px;
+      height: 45px;
+      .right_navbar_wrapper {
+        gap: 12px;
+        a {
+          width: 25px;
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  nav {
+    padding: 26px 15px;
+    .search_box {
+      .search_wrapper {
+        input {
+          font-size: 12px;
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 670px) {
+  nav {
+    padding: 15px 10px;
+    .left_navbar {
+      width: calc(100% - 150px);
+      .brands {
+        width: 100px;
+      }
+      .discounts {
+        width: 100px;
+      }
+    }
+    .search_box {
+      width: 30px;
+      background: #f1f8ff;
+      .search_wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        gap: 0;
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// 580px gacha
