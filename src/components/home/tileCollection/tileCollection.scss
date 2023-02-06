@@ -1,0 +1,50 @@
+.tile_collection {
+  padding: 0 !important;
+  > .row {
+    > .col-6 {
+      height: 500px;
+      .content_wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .tile_type {
+          padding: 14px 20px;
+          background: rgba(59, 185, 184, 0.8);
+          display: inline-block;
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 30px;
+          color: #ffffff;
+          position: absolute;
+          bottom: 40px;
+        }
+        p {
+          position: absolute;
+          bottom: 11px;
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ffffff;
+          margin-bottom: 0;
+          left: 21px;
+        }
+      }
+      > .row {
+        height: 50%;
+        &:first-child {
+          padding-bottom: 10px;
+        }
+        &:last-child {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
