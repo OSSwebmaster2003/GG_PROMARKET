@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import collection1 from "../../../assets/tileCollection/collection1.png";
 import collection2 from "../../../assets/tileCollection/collection2.png";
 import collection3 from "../../../assets/tileCollection/collection3.png";
