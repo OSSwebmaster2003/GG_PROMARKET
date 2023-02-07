@@ -9,6 +9,12 @@ import shower2 from "../assets/products/shower2.png";
 import bath2 from "../assets/products/bath2.png";
 import toilet2 from "../assets/products/toilet2.png";
 import sink3 from "../assets/products/sink3.png";
+import articles1 from "../assets/articles/articles1.png";
+import articles2 from "../assets/articles/articles2.png";
+import articles3 from "../assets/articles/articles3.png";
+import articles4 from "../assets/articles/articles4.png";
+import articles5 from "../assets/articles/articles5.png";
+import articles6 from "../assets/articles/articles6.png";
 
 const initialState = {
   isLoading: false,
@@ -152,6 +158,38 @@ const initialState = {
       color: "Белый",
       material: "Чугун",
       volume: "no volume",
+    },
+  ],
+  articles: [
+    {
+      id: "1",
+      img: articles1,
+      name: "Актуальные и необычные аксессуары для ванной комнаты ",
+    },
+    {
+      id: "2",
+      img: articles2,
+      name: "Какой температуры должна быть горячая вода? ",
+    },
+    {
+      id: "3",
+      img: articles3,
+      name: "Конденсат на бачке унитаза: причины появления и способы устранения ",
+    },
+    {
+      id: "4",
+      img: articles4,
+      name: "Анаэробный герметик для резьбовых соединений ",
+    },
+    {
+      id: "5",
+      img: articles5,
+      name: "GG Promarket — крупный ритейлер сантехнического оборудования, плитки и аксессуаров. Мы нацелены на то, чтобы сделать процесс выбора ",
+    },
+    {
+      id: "6",
+      img: articles6,
+      name: "Акриловая ванна AM.PM Bliss L 180х80 W53A-180-080W-ARB",
     },
   ],
   error: null,

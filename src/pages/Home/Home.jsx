@@ -3,13 +3,15 @@ import { useSelector } from 'react-redux';
 import Collaborators from '../../components/home/collaborators/Collaborators';
 import Services from '../../components/home/homeServices/Services';
 import TileCollection from '../../components/home/tileCollection/TileCollection';
+import ResSlider from '../../components/responsiveSlider/ResSlider';
 import SingleSlider from '../../components/singleSlider/SingleSlider';
 import Tab from '../../components/tabs/Tab';
 import "./home.scss";
 
 function Home(props) {
   const {products} = useSelector(state => state.productslice)
-  console.log(products);
+  const {articles} = useSelector(state => state.productslice)
+  console.log(articles);
   return (
     <div className='home_page'>
       <div className="banner_section container-fluid">
@@ -72,6 +74,12 @@ function Home(props) {
           <h1>Популярные бренды</h1>
         </div>
         <Collaborators/>
+      </div>
+      <div className="articles_section">
+        <div className="heading">
+          <h1>Статьи</h1>
+        </div>
+        <ResSlider items={articles} mainBreak={4} />
       </div>
     </div>
   );

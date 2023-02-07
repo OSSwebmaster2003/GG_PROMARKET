@@ -1,17 +1,14 @@
 import React from 'react';
 import Slider from 'react-slick';
 import ProductCard from '../../ui/productCard/ProductCard';
-import prev from "../../assets/slider/prev.png";
-import next from "../../assets/slider/next.png";
 import "./resSlider.scss";
 
-function ResSlider({items}) {
-
+function ResSlider({items , mainBreak}) {
   var settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: mainBreak,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [

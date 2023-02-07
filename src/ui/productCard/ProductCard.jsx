@@ -4,7 +4,7 @@ import "./productCard.scss";
 
 function ProductCard({name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume}) {
   return (
-    <Card>
+    <Card className={!cost ? "short_card" : ""}>
       <img
         alt="Sample"
         src={img}
@@ -20,7 +20,7 @@ function ProductCard({name , img , status1,status2 , country , cost , discountCo
         <div className="product_country">
           <p>{country}</p>
         </div>
-        <div className="product_actions">
+        {cost && <div className="product_actions">
           <div className="costs">
             {discountCost === "no discount" ? <h2>{cost}</h2> : 
             <div className='sub_costs'>
@@ -30,7 +30,7 @@ function ProductCard({name , img , status1,status2 , country , cost , discountCo
             }
           </div>
           <div className="add_cart">В КОРЗИНУ</div>
-        </div>
+        </div>}
       </CardBody>
     </Card>
   );

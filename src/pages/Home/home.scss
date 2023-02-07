@@ -270,7 +270,29 @@
     width: 100%;
     padding: 40px calc((100% - 1540px) / 2);
     padding-bottom: 52px;
-    background-color: #eaf4ff;
+    .heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 42px;
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #000000;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #1061ab;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .articles_section {
+    width: 100%;
+    padding: 40px calc((100% - 1540px) / 2);
+    padding-top: 0;
+    padding-bottom: px70;
     .heading {
       display: flex;
       align-items: flex-start;
