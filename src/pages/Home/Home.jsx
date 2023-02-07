@@ -6,6 +6,7 @@ import TileCollection from '../../components/home/tileCollection/TileCollection'
 import ResSlider from '../../components/responsiveSlider/ResSlider';
 import SingleSlider from '../../components/singleSlider/SingleSlider';
 import Tab from '../../components/tabs/Tab';
+import about_main from "../../assets/about/about_main.png";
 import "./home.scss";
 
 function Home(props) {
@@ -80,6 +81,22 @@ function Home(props) {
           <h1>Статьи</h1>
         </div>
         <ResSlider items={articles} mainBreak={4} />
+      </div>
+      <div className="about_store_section">
+        <div className="about_wrapper">
+          <img src={about_main} alt="" />
+          <div className="info_part">
+            <div className="info_header">Блок SEO-текста про магазин</div>
+            <div className="info_body">
+              GG Promarket — крупный ритейлер сантехнического оборудования, плитки и аксессуаров. Мы нацелены на то, чтобы сделать процесс выбора 
+              и покупки сантехники максимально простым и интуитивно понятным. 
+              При создании и обновлении сайта santehnika-online.ru мы продумали логичную структуру каталога, организовали систему поиска, снабдили карточки товаров подробными описаниями и характеристиками.
+
+              Выбирать оборудование в нашем магазине легко даже тем, кто впервые имеет дело с сантехникой. А уточнить детали и получить информацию 
+              о совместимости товаров круглосуточно помогут опытные консультанты нашего контакт-центра. С нами вы полюбите выбирать!
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
