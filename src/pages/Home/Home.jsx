@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Collaborators from '../../components/home/collaborators/Collaborators';
 import Services from '../../components/home/homeServices/Services';
 import TileCollection from '../../components/home/tileCollection/TileCollection';
 import SingleSlider from '../../components/singleSlider/SingleSlider';
@@ -60,6 +61,17 @@ function Home(props) {
           <h1>Акции</h1>
         </div>
         <Tab products={products.filter((item) => item.discountCost !== "no discount")}/>
+      </div>
+      <div className="another_banner_section">
+        <div className="banner_wrapper">
+          <p>ЕЩЕ ОДИН БАННЕР</p>
+        </div>
+      </div>
+      <div className="collaborators_section">
+        <div className="heading">
+          <h1>Популярные бренды</h1>
+        </div>
+        <Collaborators/>
       </div>
     </div>
   );
