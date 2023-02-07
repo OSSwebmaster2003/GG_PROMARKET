@@ -2,6 +2,7 @@ import React from 'react';
 import Services from '../../components/home/homeServices/Services';
 import TileCollection from '../../components/home/tileCollection/TileCollection';
 import SingleSlider from '../../components/singleSlider/SingleSlider';
+import Tab from '../../components/tabs/Tab';
 import "./home.scss";
 
 function Home(props) {
@@ -44,6 +45,12 @@ function Home(props) {
           <h1>Коллекции плитки</h1>
         </div>
         <TileCollection/>
+      </div>
+      <div className="best_sellers_section">
+        <div className="heading">
+          <h1>Хиты продаж</h1>
+        </div>
+        <Tab/>
       </div>
     </div>
   );
