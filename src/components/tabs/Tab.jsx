@@ -1,11 +1,8 @@
 import { Tabs } from 'antd';
-import { useSelector } from 'react-redux';
 import ResSlider from '../responsiveSlider/ResSlider';
 import "./tab.scss";
 
-function Tab(props) {
-  const {products} = useSelector(state => state.productslice)
-  console.log(products);
+function Tab({products}) {
 
   const items = [
     {

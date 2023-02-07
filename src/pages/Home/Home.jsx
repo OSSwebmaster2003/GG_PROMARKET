@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Services from '../../components/home/homeServices/Services';
 import TileCollection from '../../components/home/tileCollection/TileCollection';
 import SingleSlider from '../../components/singleSlider/SingleSlider';
@@ -6,6 +7,8 @@ import Tab from '../../components/tabs/Tab';
 import "./home.scss";
 
 function Home(props) {
+  const {products} = useSelector(state => state.productslice)
+  console.log(products);
   return (
     <div className='home_page'>
       <div className="banner_section container-fluid">
@@ -50,7 +53,13 @@ function Home(props) {
         <div className="heading">
           <h1>Хиты продаж</h1>
         </div>
-        <Tab/>
+        <Tab products={products}/>
+      </div>
+      <div className="discount_sellers_section">
+        <div className="heading">
+          <h1>Акции</h1>
+        </div>
+        <Tab products={products.filter((item) => item.discountCost !== "no discount")}/>
       </div>
     </div>
   );
