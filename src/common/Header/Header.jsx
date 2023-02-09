@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from "../../assets/header/logo.png"
 import "./header.scss";
 
 function Header(props) {
@@ -8,7 +9,7 @@ function Header(props) {
     <header>
       <div className="header_wrapper">
         <div className="header_logo">
-          <img src="./assets/logo.png" alt="" />
+          <img src={logo} alt="" />
         </div>
         <div className="header_location">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">

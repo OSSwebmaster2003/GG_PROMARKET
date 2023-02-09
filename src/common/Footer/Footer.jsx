@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import whatsapp from "../../assets/media/whatsapp.png";
 import instagram from "../../assets/media/instagram.png";
 import telegram from "../../assets/media/telegram.png";
-import yandex_map from "../../assets/footer/yandex_map.png"
+import yandex_map from "../../assets/footer/yandex_map.png";
+import logo from "../../assets/header/logo.png"
 import "./footer.scss";
 
 function Footer(props) {
@@ -86,7 +87,7 @@ function Footer(props) {
       <div className="middle_footer">
         <div className='logo_part'>
           <Link>
-            <img src="./assets/logo.png" alt="" />
+            <img src={logo} alt="" />
           </Link>
           <p>© {new Date().getFullYear()} ggpromarket.ru</p>
         </div>

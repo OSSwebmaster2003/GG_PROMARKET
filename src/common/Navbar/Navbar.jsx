@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import user from "../../assets/header/user.png";
+import heart from "../../assets/header/heart.png";
+import cart from "../../assets/header/cart.png";
 import "./navbar.scss";
 
 function Navbar(props) {
@@ -28,13 +31,13 @@ function Navbar(props) {
       <div className="right_navbar">
         <div className="right_navbar_wrapper">
           <Link to="/profile">
-            <img src="./assets/user.png" alt="" />
+            <img src={user} alt="" />
           </Link>
           <Link to="/wishlist">
-            <img src="./assets/heart.png" alt="" />
+            <img src={heart} alt="" />
           </Link>
           <Link to="/cart">
-            <img src="./assets/cart.png" alt="" />
+            <img src={cart} alt="" />
           </Link>
         </div>
       </div>
