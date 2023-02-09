@@ -17,12 +17,12 @@ function Home(props) {
     <div className='home_page'>
       <div className="banner_section container-fluid">
         <div className="row">
-          <div className="col-7 for_slider">
+          <div className="col-12 col-lg-7 for_slider">
             <SingleSlider/>
           </div>
-          <div className="col-5">
+          <div className="col-12 col-lg-5">
             <div className="row">
-              <div className="col-12 for_toilet">
+              <div className="col-12 col-sm-6 col-lg-12 for_toilet">
                 <div className="info_wrapper">
                   <div className="info">
                     <h1>УНИТАЗЫ</h1>
@@ -31,7 +31,7 @@ function Home(props) {
                   </div>
                 </div>
               </div>
-              <div className="col-12 for_discount">
+              <div className="col-12 col-sm-6 col-lg-12 for_discount">
                 <div className="info_wrapper">
                   <div className="info">
                     <h1>ТОВАРЫ</h1>

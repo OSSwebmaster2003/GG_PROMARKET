@@ -37,7 +37,7 @@ function TileCollection(props) {
   return (
     <div className='tile_collection container-fluid'>
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-xl-6">
           <div className="content_wrapper" 
           style={{ backgroundImage: `url(${tiles[0].bg})` }}
           >
@@ -45,9 +45,9 @@ function TileCollection(props) {
             <p>{tiles[0].brand}</p>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-12 col-xl-6">
           <div className="row">
-            <div className="col-8">
+            <div className="col-12 col-sm-6 col-md-8">
               <div className="content_wrapper"
               style={{ backgroundImage: `url(${tiles[1].bg})` }}
               >
@@ -55,7 +55,7 @@ function TileCollection(props) {
                 <p>{tiles[1].brand}</p>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-sm-6 col-md-4">
               <div className="content_wrapper"
               style={{ backgroundImage: `url(${tiles[2].bg})` }}
               >
@@ -65,7 +65,7 @@ function TileCollection(props) {
             </div>
           </div>
           <div className="row">
-            <div className="col-4">
+            <div className="col-12 col-sm-6 col-md-4">
               <div className="content_wrapper"
               style={{ backgroundImage: `url(${tiles[3].bg})` }}
               >
@@ -73,7 +73,7 @@ function TileCollection(props) {
                 <p>{tiles[3].brand}</p>
               </div>
             </div>
-            <div className="col-8">
+            <div className="col-12 col-sm-6 col-md-8">
               <div className="content_wrapper"
               style={{ backgroundImage: `url(${tiles[4].bg})` }}
               >

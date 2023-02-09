@@ -142,3 +142,11 @@
     border: 0.375rem;
   }
 }
+
+@media (max-width: 400px) {
+  .card {
+    img {
+      height: 200px;
+    }
+  }
+}

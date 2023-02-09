@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import "./singleSlider.scss";
 
 const settings = {
   dots: true,

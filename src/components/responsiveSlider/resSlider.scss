@@ -32,9 +32,45 @@
     }
   }
 }
-// .slick-disabled {
-//   opacity: 0.4;
-//   color: initial !important;
-//   background: initial !important;
-//   outline: initial !important;
-// }
+
+// media queries
+
+@media (max-width: 1600px) {
+  .slick-slider {
+    .slick-prev {
+      width: 30px;
+      height: 30px;
+      left: -15px;
+    }
+    .slick-next {
+      width: 30px;
+      height: 30px;
+      right: -15px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .slick-slider {
+    .slick-prev {
+      width: 25px;
+      height: 25px;
+      left: -12.5px;
+    }
+    .slick-next {
+      width: 25px;
+      height: 25px;
+      right: -12.5px;
+    }
+  }
+}
+@media (max-width: 670px) {
+  .slick-slider {
+    .slick-prev {
+      left: 10px;
+    }
+    .slick-next {
+      right: 10px;
+    }
+  }
+}
