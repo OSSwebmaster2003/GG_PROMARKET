@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardBody, CardTitle } from 'reactstrap';
+import heart from "../../assets/media/heart.png";
 import "./productCard.scss";
 
-function ProductCard({name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume}) {
+function ProductCard({id,name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume}) {
   return (
     <Card className={!cost ? "short_card" : ""}>
       <img
@@ -32,6 +34,16 @@ function ProductCard({name , img , status1,status2 , country , cost , discountCo
           <div className="add_cart">В КОРЗИНУ</div>
         </div>}
       </CardBody>
+      <div className="hovered_part_watch">
+        <Link to={`/product/${id}`} className="watch_wrapper">
+          БЫСТРЫЙ ПРОСМОТР
+        </Link>
+      </div>
+      <div className="hovered_part_wishlist">
+        <div className="wishlist_wrapper">
+          <img src={heart} alt="" />
+        </div>
+      </div>
     </Card>
   );
 }

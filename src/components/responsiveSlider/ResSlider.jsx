@@ -49,7 +49,7 @@ function ResSlider({items , mainBreak}) {
     <div>
       <Slider {...settings}>
           {items.map(({id , ...props}) => (
-            <ProductCard key ={id} {...props}/>
+            <ProductCard key ={id} id={id} {...props}/>
           ))}
         </Slider>
     </div>

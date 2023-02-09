@@ -7,9 +7,11 @@
   justify-content: space-between;
   flex-direction: column !important;
   background: #ffffff;
+  cursor: pointer;
   img {
     width: 100%;
     height: 290px;
+    transition: 0.3s linear all;
   }
   .status_btns {
     position: absolute;
@@ -57,6 +59,7 @@
       line-height: 20px;
       color: #000000;
       font-weight: bold;
+      transition: 0.3s linear all;
     }
     .product_country {
       width: 100%;
@@ -129,6 +132,76 @@
           background-color: #2b7bc6;
           color: #ffffff;
         }
+      }
+    }
+  }
+  .hovered_part_watch {
+    position: absolute;
+    top: 30%;
+    width: 90%;
+    padding: 13px 0;
+    background: #2b7bc6;
+    opacity: 0.6;
+    border-radius: 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s linear all;
+    .watch_wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+  .hovered_part_wishlist {
+    position: absolute;
+    top: 24px;
+    right: 26px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f3f9ff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s linear all;
+    .wishlist_wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 22px;
+        height: 19px;
+      }
+    }
+  }
+
+  // hover effects
+  &:hover {
+    img {
+      opacity: 0.6;
+    }
+    .hovered_part_watch {
+      display: flex;
+    }
+    .hovered_part_wishlist {
+      display: flex;
+    }
+    .card-body {
+      .card-title {
+        color: #1061ab;
       }
     }
   }
