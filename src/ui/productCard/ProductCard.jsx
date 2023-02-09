@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 import heart from "../../assets/media/heart.png";
 import "./productCard.scss";
 
-function ProductCard({id,name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume}) {
+function ProductCard({id,name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume , getProductDesc}) {
   return (
     <Card className={!cost ? "short_card" : ""}>
       <img
@@ -35,7 +35,7 @@ function ProductCard({id,name , img , status1,status2 , country , cost , discoun
         </div>}
       </CardBody>
       <div className="hovered_part_watch">
-        <Link to={`/product/${id}`} className="watch_wrapper">
+        <Link to={`/product/${id}`} className="watch_wrapper" onClick={getProductDesc}>
           БЫСТРЫЙ ПРОСМОТР
         </Link>
       </div>

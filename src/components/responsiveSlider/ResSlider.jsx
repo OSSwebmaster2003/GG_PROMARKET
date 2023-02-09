@@ -1,9 +1,13 @@
 import React from 'react';
+import { useDispatch, useSelector} from 'react-redux';
 import Slider from 'react-slick';
+import { getProductDescription } from '../../slice/productslice';
 import ProductCard from '../../ui/productCard/ProductCard';
 import "./resSlider.scss";
 
 function ResSlider({items , mainBreak}) {
+  const {productDesc} = useSelector(state => state.productslice)
+  const dispatch = useDispatch()
   var settings = {
     dots: false,
     infinite: false,
@@ -45,11 +49,18 @@ function ResSlider({items , mainBreak}) {
       }
     ]
   };
+
+  const getProductDesc = (id) => {
+    const index = items.findIndex((item) => item.id === id)
+    dispatch(getProductDescription(items[index]))
+    console.log(productDesc)
+  }
+
   return (
     <div>
       <Slider {...settings}>
           {items.map(({id , ...props}) => (
-            <ProductCard key ={id} id={id} {...props}/>
+            <ProductCard key ={id} id={id} {...props} getProductDesc={() => getProductDesc(id)}/>
           ))}
         </Slider>
     </div>

@@ -1,0 +1,284 @@
+.product_descr_page {
+  width: 100%;
+  padding: 20px calc((100% - 1540px) / 2);
+  background-color: #f3f9ff;
+  .product_descr_top_card {
+    width: 100%;
+    padding: 25px 30px;
+    background: #ffffff;
+    .card_wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 25px;
+      .card_breadcrump {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        a {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #2b7bc6;
+          font-weight: bold;
+        }
+        svg {
+          width: 15px;
+          height: 10px;
+        }
+        p {
+          margin-bottom: 0;
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #000000;
+          font-weight: bold;
+        }
+      }
+      .card_body {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .card_product_image {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 12px;
+          .image_changer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 20px;
+            div {
+              height: 85px;
+              width: 85px;
+              border-radius: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                border-radius: 5px;
+              }
+            }
+            .active {
+              border: 2px solid #3bb9b8;
+            }
+          }
+          .main_img {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 90%;
+              height: 90%;
+            }
+          }
+        }
+        .card_product_info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 22px;
+          .info_header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 300px;
+            p {
+              margin-bottom: 0;
+              font-family: "Montserrat", sans-serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              color: #000000;
+            }
+            h1 {
+              margin-bottom: 0;
+              font-family: "Montserrat", sans-serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              color: #2b7bc6;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 8px;
+              a {
+                text-decoration: none;
+              }
+              svg {
+                width: 22px;
+                height: 16px;
+                color: #000000;
+              }
+            }
+          }
+          .info_name {
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 42px;
+            color: #000000;
+          }
+          .info_full {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 100px;
+            .first_part {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 38px;
+              .full_header {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 44px;
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  gap: 12px;
+                  font-family: "Montserrat", sans-serif;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: #2b7bc6;
+                  text-decoration: none;
+                }
+              }
+              .full_body {
+                width: 100%;
+                table {
+                  border-collapse: collapse;
+                  width: 100%;
+                  tr {
+                    border-bottom: 1pt dotted black;
+                    td {
+                      font-family: "Montserrat", sans-serif;
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 14px;
+                      line-height: 30px;
+                      color: #000000;
+                    }
+                  }
+                }
+                p {
+                  margin-bottom: 0;
+                  font-family: "Montserrat", sans-serif;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 30px;
+                  color: #2b7bc6;
+                  margin-top: 10px;
+                }
+              }
+            }
+            .second_part {
+              padding: 30px 40px;
+              background: #f3f9ff;
+              h1 {
+                margin-bottom: 0;
+                font-family: "Montserrat", sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 30px;
+                color: #000000;
+              }
+              button {
+                margin-top: 38px;
+                width: 100%;
+                padding: 18px 0;
+                border: none;
+                outline: none;
+                background: #2b7bc6;
+                border-radius: 4px;
+                font-family: "Montserrat", sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                letter-spacing: 0.15em;
+                color: #ffffff;
+                border: 2px solid #2b7bc6;
+                cursor: pointer;
+                transition: 0.3s linear all;
+                &:hover {
+                  color: #2b7bc6;
+                  background-color: #ffffff;
+                  border: 2px solid #2b7bc6;
+                }
+              }
+              p {
+                margin-bottom: 0;
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 8px;
+                font-family: "Montserrat", sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #3bb9b8;
+                padding-bottom: 26px;
+                width: 100%;
+                border-bottom: 1px solid #e1eefb;
+              }
+              table {
+                margin-top: 21px;
+                border-collapse: collapse;
+                width: 100%;
+                tr {
+                  width: 100%;
+                  border-bottom: 1pt dotted black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-start;
+                  gap: 20px;
+                  td {
+                    font-family: "Montserrat", sans-serif;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #000000;
+                    &:first-child {
+                      width: 90px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

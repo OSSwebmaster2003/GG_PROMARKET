@@ -192,14 +192,19 @@ const initialState = {
       name: "Акриловая ванна AM.PM Bliss L 180х80 W53A-180-080W-ARB",
     },
   ],
+  productDesc: [],
   error: null,
 };
 
 export const productslice = createSlice({
   name: "products",
   initialState,
-  reducers: {},
+  reducers: {
+    getProductDescription: (state, action) => {
+      state.productDesc = action.payload;
+    },
+  },
 });
 
-export const {} = productslice.actions;
+export const { getProductDescription } = productslice.actions;
 export default productslice.reducer;
