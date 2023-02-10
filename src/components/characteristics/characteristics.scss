@@ -36,138 +36,6 @@
       color: #2b7bc6;
     }
   }
-  .set_products {
-    width: 320px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 25px;
-    h1 {
-      margin-bottom: 0;
-      font-family: "Montserrat", sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 20px;
-      color: #000000;
-    }
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: 0;
-      padding: 0;
-      border: none;
-      outline: none;
-      background: inherit;
-      height: initial !important;
-      .first_part {
-        width: 100%;
-        border: 10px solid #ffd600;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 0;
-        > div {
-          width: 100%;
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          gap: 20px;
-          padding: 22px;
-          border-top: 1px solid #ffd600;
-          background: #ffffff;
-          img {
-            width: 80px;
-            height: 80px;
-          }
-          .info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 10px;
-            p {
-              margin-bottom: 0;
-              font-family: "Montserrat", sans-serif;
-              font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 20px;
-              color: #000000;
-            }
-            h1 {
-              font-family: "Montserrat", sans-serif;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 18px;
-              line-height: 28px;
-              color: #000000;
-              margin-bottom: 0;
-            }
-            h2 {
-              font-family: "Montserrat", sans-serif;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 14px;
-              line-height: 20px;
-              text-decoration-line: line-through;
-              color: #ea1649;
-              margin-top: -7px;
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
-      .second_part {
-        width: 100%;
-        padding: 20px 30px;
-        background: #e1eefb;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        p {
-          margin-bottom: 0;
-          font-family: "Montserrat", sans-serif;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 30px;
-          color: #000000;
-        }
-        h1 {
-          margin-bottom: 0;
-          font-family: "Montserrat";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 36px;
-          line-height: 48px;
-          color: #000000;
-        }
-        button {
-          width: 100%;
-          padding: 18px 0;
-          background: #1061ab;
-          border-radius: 4px;
-          margin-top: 21px;
-          border: none;
-          outline: none;
-          font-family: "Montserrat", sans-serif;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 24px;
-          text-align: center;
-          letter-spacing: 0.15em;
-          color: #ffffff;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 1200px) {
@@ -186,20 +54,6 @@
       justify-content: center;
       p {
         text-align: center;
-      }
-    }
-    .set_products {
-      width: 250px;
-      .card {
-        .first_part {
-          > div {
-            padding: 15px 10px;
-            gap: 10px;
-          }
-        }
-        .second_part {
-          padding: 15px 10px;
-        }
       }
     }
   }
@@ -221,22 +75,6 @@
       align-items: flex-start;
       justify-content: flex-start;
       gap: 15px;
-    }
-    .set_products {
-      width: 100%;
-      .card {
-        width: 100%;
-        .first_part {
-          > div {
-            justify-content: flex-start;
-            gap: 30px;
-            padding: 20px 40px;
-          }
-        }
-        .second_part {
-          padding: 20px 40px;
-        }
-      }
     }
   }
 }

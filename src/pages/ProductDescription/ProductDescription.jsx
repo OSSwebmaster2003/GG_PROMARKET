@@ -11,6 +11,9 @@ import correct from "../../assets/media/correct.png";
 import "./productDescription.scss";
 import { Tabs } from 'antd';
 import Charasteristics from '../../components/characteristics/Charasteristics';
+import CompleteSet from '../../components/completeSet/CompleteSet';
+import Description from '../../components/productDescription/Description';
+import Comments from '../../components/comments/Comments';
 
 function ProductDescription(props) {
   const [imgChanger , setImgChanger] = useState(1)
@@ -20,7 +23,7 @@ function ProductDescription(props) {
     {
       key: '1',
       label: `Комплектации`,
-      children: `There are some content here`,
+      children: <CompleteSet/>,
     },
     {
       key: '2',
@@ -30,12 +33,12 @@ function ProductDescription(props) {
     {
       key: '3',
       label: `Описание`,
-      children: `there are some content here`,
+      children: <Description/>,
     },
     {
       key: '4',
-      label: `Отзывы (5)`,
-      children: `there are comments here `,
+      label: `Отзывы (2)`,
+      children: <Comments/>,
     },
   ];
 
