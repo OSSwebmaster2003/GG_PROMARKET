@@ -2,6 +2,11 @@
   width: 100%;
   padding: 20px calc((100% - 1540px) / 2);
   background-color: #f3f9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
   .product_descr_top_card {
     width: 100%;
     padding: 25px 30px;
@@ -66,6 +71,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
+              cursor: pointer;
               img {
                 border-radius: 5px;
               }
@@ -276,6 +282,48 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .product_descr_bottom_card {
+    width: 100%;
+    background: #ffffff;
+    padding: 16px 30px;
+    .card_wrapper {
+      width: 100%;
+      .for_tab_descr {
+        width: 100%;
+        .ant-tabs {
+          width: 100%;
+          .ant-tabs-nav {
+            width: 100%;
+            .ant-tabs-nav-list {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 30px;
+              .ant-tabs-tab {
+                margin: 0;
+                .ant-tabs-tab-btn {
+                  font-family: "Montserrat", sans-serif;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 18px;
+                  line-height: 30px;
+                  color: #000000;
+                }
+              }
+              .ant-tabs-tab-active {
+                .ant-tabs-tab-btn {
+                  color: #3bb9b8;
+                }
+              }
+            }
+          }
+          .ant-tabs-content-holder {
+            padding: 15px 0;
           }
         }
       }
@@ -521,6 +569,9 @@
           }
         }
       }
+    }
+    .product_descr_bottom_card {
+      padding: 15px;
     }
   }
 }

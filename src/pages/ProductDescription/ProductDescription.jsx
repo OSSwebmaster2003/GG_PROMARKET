@@ -9,11 +9,36 @@ import heart from "../../assets/media/heart.png";
 import roca from "../../assets/collaborators/roca.png";
 import correct from "../../assets/media/correct.png";
 import "./productDescription.scss";
+import { Tabs } from 'antd';
+import Charasteristics from '../../components/characteristics/Charasteristics';
 
 function ProductDescription(props) {
   const [imgChanger , setImgChanger] = useState(1)
   const {productDesc} = useSelector(state => state.productslice)
   const {id} = useParams()
+  const items = [
+    {
+      key: '1',
+      label: `Комплектации`,
+      children: `There are some content here`,
+    },
+    {
+      key: '2',
+      label: `Характеристики`,
+      children: <Charasteristics/>,
+    },
+    {
+      key: '3',
+      label: `Описание`,
+      children: `there are some content here`,
+    },
+    {
+      key: '4',
+      label: `Отзывы (5)`,
+      children: `there are comments here `,
+    },
+  ];
+
   return (
     <div className='product_descr_page'>
       <div className="product_descr_top_card">
@@ -125,6 +150,13 @@ function ProductDescription(props) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="product_descr_bottom_card">
+        <div className="card_wrapper">
+          <div className="for_tab_descr">
+            <Tabs items={items}/>
           </div>
         </div>
       </div>
