@@ -4,7 +4,21 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 import heart from "../../assets/media/heart.png";
 import "./productCard.scss";
 
-function ProductCard({id,name , img , status1,status2 , country , cost , discountCost  , type , color , material , volume , getProductDesc}) {
+function ProductCard({id,
+  name , 
+  img , 
+  status1,
+  status2 , 
+  country , 
+  cost , 
+  discountCost  , 
+  type , 
+  color , 
+  material , 
+  volume , 
+  getProductDesc,
+  addItemToCart,
+}) {
   return (
     <Card className={!cost ? "short_card" : ""}>
       <img
@@ -31,7 +45,7 @@ function ProductCard({id,name , img , status1,status2 , country , cost , discoun
             </div>
             }
           </div>
-          <div className="add_cart">В КОРЗИНУ</div>
+          <div className="add_cart" onClick={addItemToCart}>В КОРЗИНУ</div>
         </div>}
       </CardBody>
       <div className="hovered_part_watch">

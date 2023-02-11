@@ -12,7 +12,6 @@ import "./home.scss";
 function Home(props) {
   const {products} = useSelector(state => state.productslice)
   const {articles} = useSelector(state => state.productslice)
-  console.log(articles);
   return (
     <div className='home_page'>
       <div className="banner_section container-fluid">

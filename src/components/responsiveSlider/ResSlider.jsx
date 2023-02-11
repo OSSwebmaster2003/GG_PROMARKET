@@ -1,12 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import Slider from 'react-slick';
+import { addToCart } from '../../slice/cartSlice';
 import { getProductDescription } from '../../slice/productslice';
 import ProductCard from '../../ui/productCard/ProductCard';
 import "./resSlider.scss";
 
 function ResSlider({items , mainBreak}) {
   const {productDesc} = useSelector(state => state.productslice)
+  const {cart} = useSelector(state => state.cartSlice)
   const dispatch = useDispatch()
   var settings = {
     dots: false,
@@ -56,11 +58,41 @@ function ResSlider({items , mainBreak}) {
     console.log(productDesc)
   }
 
+  const addItemToCart = (product) => {
+    const index = cart.findIndex((item) => item.id === product.id)
+    
+    if(index < 0){
+      const newProduct = {
+        ...product,
+        quantity : 1
+      }
+      dispatch(addToCart([...cart , newProduct]))
+    }else{
+      const newCart = cart.map((itemOrder , itemIndex) => {
+        if(itemIndex === index){
+          return{
+            ...itemOrder,
+            quantity : itemOrder.quantity + 1
+          }
+        }else{
+          return itemOrder
+        }
+      })
+      dispatch(addToCart(newCart))
+    }
+  }
+
   return (
     <div>
       <Slider {...settings}>
           {items.map(({id , ...props}) => (
-            <ProductCard key ={id} id={id} {...props} getProductDesc={() => getProductDesc(id)}/>
+            <ProductCard 
+            key ={id} 
+            id={id} 
+            {...props} 
+            getProductDesc={() => getProductDesc(id)}
+            addItemToCart={() => addItemToCart({id , ...props})}
+            />
           ))}
         </Slider>
     </div>
