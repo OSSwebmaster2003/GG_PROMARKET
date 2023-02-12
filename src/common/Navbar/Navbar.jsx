@@ -2,10 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import user from "../../assets/header/user.png";
 import heart from "../../assets/header/heart.png";
-import cart from "../../assets/header/cart.png";
+import cartImg from "../../assets/header/cart.png";
 import "./navbar.scss";
+import { useSelector } from 'react-redux';
 
 function Navbar(props) {
+  const {cart} = useSelector(state => state.cartSlice)
+  const {wishlist} = useSelector(state => state.cartSlice)
   return (
     <nav>
       <div className="left_navbar">
@@ -35,9 +38,11 @@ function Navbar(props) {
           </Link>
           <Link to="/wishlist">
             <img src={heart} alt="" />
+            {wishlist.length !==0 && <div className='wishlist_length'>{wishlist.length}</div>}
           </Link>
           <Link to="/cart">
-            <img src={cart} alt="" />
+            {cart.length !==0 && <div className='wishlist_length'>{cart.length}</div>}
+            <img src={cartImg} alt="" />
           </Link>
         </div>
       </div>

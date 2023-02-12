@@ -144,6 +144,26 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        .wishlist_length {
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          border: none;
+          outline: none;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #ffd600;
+          top: -25px;
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 15px;
+          color: #004c93;
+        }
       }
     }
   }
@@ -305,6 +325,11 @@ nav {
           height: 100%;
           border-right: 2px solid grey;
           transition: 0.3s linear all;
+          .wishlist_length {
+            top: 13px;
+            left: 51%;
+            z-index: 2;
+          }
           &:last-child {
             border: none;
           }
