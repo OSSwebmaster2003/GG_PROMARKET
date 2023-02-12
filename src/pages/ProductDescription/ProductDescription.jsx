@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import img_changer1 from "../../assets/details/img_changer1.png";
@@ -14,11 +14,50 @@ import Charasteristics from '../../components/characteristics/Charasteristics';
 import CompleteSet from '../../components/completeSet/CompleteSet';
 import Description from '../../components/productDescription/Description';
 import Comments from '../../components/comments/Comments';
+import { addToCart, addToWishlist, deleteWishlistElement } from '../../slice/cartSlice';
 
 function ProductDescription(props) {
   const [imgChanger , setImgChanger] = useState(1)
   const {productDesc} = useSelector(state => state.productslice)
+  const {cart} = useSelector(state => state.cartSlice)
+  const {wishlist} = useSelector(state => state.cartSlice)
+  const dispatch = useDispatch()
   const {id} = useParams()
+  const index = wishlist.findIndex((item) => item.id === productDesc.id)
+
+  const addItemToWishlist = (product) => {
+    const index = wishlist.findIndex((item) => item.id === product.id)
+    if(index<0){
+      dispatch(addToWishlist([...wishlist , product]))
+    }else{
+      dispatch(deleteWishlistElement(product.id))
+    }
+  }
+
+  const addItemToCart = (product) => {
+    const index = cart.findIndex((item) => item.id === product.id)
+    
+    if(index < 0){
+      const newProduct = {
+        ...product,
+        quantity : 1
+      }
+      dispatch(addToCart([...cart , newProduct]))
+    }else{
+      const newCart = cart.map((itemOrder , itemIndex) => {
+        if(itemIndex === index){
+          return{
+            ...itemOrder,
+            quantity : itemOrder.quantity + 1
+          }
+        }else{
+          return itemOrder
+        }
+      })
+      dispatch(addToCart(newCart))
+    }
+  }
+
   const items = [
     {
       key: '1',
@@ -88,8 +127,12 @@ function ProductDescription(props) {
               <div className="info_full">
                 <div className="first_part">
                   <div className="full_header">
-                    <Link to="/cart">
-                      <img src={heart} alt="" />
+                    <Link 
+                    onClick={index < 0 ? 
+                    () => addItemToWishlist(productDesc) : 
+                    () => dispatch(deleteWishlistElement(productDesc.id)) 
+                    }>
+                      {index < 0 ? <img src={heart} alt="" /> : <svg style={{color : "#2b7bc6"}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>}
                       В избранное
                     </Link>
                     <img src={roca} alt="" />
@@ -134,7 +177,7 @@ function ProductDescription(props) {
                 </div>
                 <div className="second_part">
                   <h1>{productDesc.cost}</h1>
-                  <button>В КОРЗИНУ</button>
+                  <button onClick={() => addItemToCart(productDesc)}>В КОРЗИНУ</button>
                   <p>Товар в наличии <img src={correct} alt="" /></p>
                   <table>
                     <tr>
