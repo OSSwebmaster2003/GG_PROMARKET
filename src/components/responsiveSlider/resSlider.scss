@@ -13,6 +13,12 @@
     top: 50%;
     right: -30px;
     z-index: 2;
+    cursor: pointer;
+    transition: 0.2s linear all;
+    &:hover {
+      background-color: #2b7bc6;
+      opacity: 0.5;
+    }
   }
   .arrow_wrapper_prev {
     width: 60px;
@@ -27,6 +33,12 @@
     top: 50%;
     left: -30px;
     z-index: 2;
+    cursor: pointer;
+    transition: 0.2s linear all;
+    &:hover {
+      background-color: #2b7bc6;
+      opacity: 0.5;
+    }
   }
 }
 
