@@ -4,13 +4,31 @@ import Slider from 'react-slick';
 import { addToCart, addToWishlist, deleteWishlistElement } from '../../slice/cartSlice';
 import { getProductDescription } from '../../slice/productslice';
 import ProductCard from '../../ui/productCard/ProductCard';
+import resPrev from "../../assets/media/resPrev.png";
+import resNext from "../../assets/media/nextPrev.png";
 import "./resSlider.scss";
 
 function ResSlider({items , mainBreak}) {
-  const {productDesc} = useSelector(state => state.productslice)
-  const {cart} = useSelector(state => state.cartSlice)
-  const {wishlist} = useSelector(state => state.cartSlice)
-  const dispatch = useDispatch()
+  const {productDesc} = useSelector(state => state.productslice);
+  const {cart} = useSelector(state => state.cartSlice);
+  const {wishlist} = useSelector(state => state.cartSlice);
+  const dispatch = useDispatch();
+
+  const PrevArrow = ({onClick}) => {
+    return(
+      <div className="arrow_wrapper_prev" onClick={onClick}>
+        <img src={resPrev} alt="" />
+      </div>
+    )
+  }
+  const NextArrow = ({onClick}) => {
+    return(
+      <div className="arrow_wrapper_next" onClick={onClick}>
+        <img src={resNext} alt="" />
+      </div>
+    )
+  }
+
   var settings = {
     dots: false,
     infinite: false,
@@ -18,6 +36,8 @@ function ResSlider({items , mainBreak}) {
     slidesToShow: mainBreak,
     slidesToScroll: 1,
     initialSlide: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1530,

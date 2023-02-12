@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import singlePrev from "../../assets/media/singlePrev.png";
+import singleNext from "../../assets/media/singleNext.png";
 import "./singleSlider.scss";
+
+const PrevArrow = ({onClick}) => {
+  return(
+    <div className="prev_arrow_wrapper" onClick={onClick}>
+      <img src={singlePrev} alt="" />
+    </div>
+  )
+}
+const NextArrow = ({onClick}) => {
+  return(
+    <div className="next_arrow_wrapper" onClick={onClick}>
+      <img src={singleNext} alt="" />
+    </div>
+  )
+}
 
 const settings = {
   dots: true,
@@ -8,8 +25,8 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // nextArrow: <SampleNextArrow />,
-  // prevArrow: <SamplePrevArrow />
+  nextArrow: < PrevArrow/>,
+  prevArrow: <NextArrow />
   // nextArrow : true,
   // prevArrow : true
 };

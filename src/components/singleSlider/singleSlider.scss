@@ -3,11 +3,17 @@
   height: 100%;
   .slick-slider {
     height: 100%;
-    .slick-prev {
+    .prev_arrow_wrapper {
+      position: absolute;
+      z-index: 2;
       left: 23px;
+      top: 50%;
     }
-    .slick-next {
+    .next_arrow_wrapper {
+      position: absolute;
+      z-index: 2;
       right: 23px;
+      top: 50%;
     }
     .slick-dots {
       bottom: 40px;

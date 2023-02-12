@@ -38,13 +38,22 @@
             &::after {
               display: none;
             }
+            &::before {
+              display: none;
+            }
             .ant-tabs-tab-btn {
               color: #ffffff;
               outline: none;
               &:after {
                 display: none;
               }
+              &::before {
+                display: none;
+              }
             }
+          }
+          .ant-tabs-ink-bar {
+            display: none;
           }
         }
       }
