@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import Slider from 'react-slick';
-import { addToCart } from '../../slice/cartSlice';
+import { addToCart, addToWishlist, deleteWishlistElement } from '../../slice/cartSlice';
 import { getProductDescription } from '../../slice/productslice';
 import ProductCard from '../../ui/productCard/ProductCard';
 import "./resSlider.scss";
@@ -9,6 +9,7 @@ import "./resSlider.scss";
 function ResSlider({items , mainBreak}) {
   const {productDesc} = useSelector(state => state.productslice)
   const {cart} = useSelector(state => state.cartSlice)
+  const {wishlist} = useSelector(state => state.cartSlice)
   const dispatch = useDispatch()
   var settings = {
     dots: false,
@@ -82,6 +83,15 @@ function ResSlider({items , mainBreak}) {
     }
   }
 
+  const addItemToWishlist = (product) => {
+    const index = wishlist.findIndex((item) => item.id === product.id)
+    if(index<0){
+      dispatch(addToWishlist([...wishlist , product]))
+    }else{
+      dispatch(deleteWishlistElement(product.id))
+    }
+  }
+
   return (
     <div>
       <Slider {...settings}>
@@ -92,6 +102,7 @@ function ResSlider({items , mainBreak}) {
             {...props} 
             getProductDesc={() => getProductDesc(id)}
             addItemToCart={() => addItemToCart({id , ...props})}
+            addItemToWishlist = {() => addItemToWishlist({id , ...props})}
             />
           ))}
         </Slider>

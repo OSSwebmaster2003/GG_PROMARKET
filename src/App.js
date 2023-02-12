@@ -7,6 +7,7 @@ import Product from "./pages/Product/Product";
 import "./App.css";
 import ProductDescription from "./pages/ProductDescription/ProductDescription";
 import Cart from "./pages/Cart/Cart";
+import Wishlist from "./pages/Wishlist/Wishlist";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDescription />} />
         <Route path="/product" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
       <Footer />
     </div>

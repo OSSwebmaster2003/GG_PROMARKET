@@ -1,10 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardTitle } from 'reactstrap';
 import heart from "../../assets/media/heart.png";
 import "./productCard.scss";
 
-function ProductCard({id,
+function ProductCard({
+  id,
   name , 
   img , 
   status1,
@@ -12,13 +14,13 @@ function ProductCard({id,
   country , 
   cost , 
   discountCost  , 
-  type , 
-  color , 
-  material , 
-  volume , 
   getProductDesc,
   addItemToCart,
+  addItemToWishlist
 }) {
+  const {wishlist} = useSelector(state => state.cartSlice)
+
+  const index = wishlist.findIndex((item) => item.id === id)
   return (
     <Card className={!cost ? "short_card" : ""}>
       <img
@@ -54,8 +56,8 @@ function ProductCard({id,
         </Link>
       </div>
       <div className="hovered_part_wishlist">
-        <div className="wishlist_wrapper">
-          <img src={heart} alt="" />
+        <div className="wishlist_wrapper" onClick={addItemToWishlist}>
+          {index < 0 ? <img src={heart} alt="" /> : <svg style={{color : "#2b7bc6"}} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>}
         </div>
       </div>
     </Card>
