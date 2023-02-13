@@ -126,6 +126,7 @@ function ResSlider({items , mainBreak}) {
             />
           ))}
         </Slider>
+        {items.length === 0 && <h4>There are no available products</h4>}
     </div>
   );
 }
