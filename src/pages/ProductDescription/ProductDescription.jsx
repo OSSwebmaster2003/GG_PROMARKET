@@ -176,7 +176,7 @@ function ProductDescription(props) {
                   </div>
                 </div>
                 <div className="second_part">
-                  <h1>{productDesc.cost}</h1>
+                  <h1>{productDesc.cost} ₽</h1>
                   <button onClick={() => addItemToCart(productDesc)}>В КОРЗИНУ</button>
                   <p>Товар в наличии <img src={correct} alt="" /></p>
                   <table>

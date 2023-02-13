@@ -50,8 +50,8 @@ function Wishlist(props) {
               <div className="info">
                 <h1>{item.name}</h1>
                 <div className="cost">
-                  <h2>{item.discountCost === "no discount" ? "" : item.cost}</h2>
-                  <h3>{item.discountCost === "no discount" ? item.cost : item.discountCost}</h3>
+                  <h2>{item.discountCost === "no discount" ? "" : item.cost} ₽</h2>
+                  <h3>{item.discountCost === "no discount" ? item.cost : item.discountCost} ₽</h3>
                 </div>
                 <div className="buttons">
                   <button className="add_to_cart" onClick={() => addItemToCart(item)}>Add To Cart</button>

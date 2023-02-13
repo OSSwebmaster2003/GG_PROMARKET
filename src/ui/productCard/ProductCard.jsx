@@ -38,12 +38,12 @@ function ProductCard({
         <div className="product_country">
           <p>{country}</p>
         </div>
-        {cost && <div className="product_actions">
+        {cost!==0 && <div className="product_actions">
           <div className="costs">
-            {discountCost === "no discount" ? <h2>{cost}</h2> : 
+            {discountCost === "no discount" ? <h2>{cost} ₽</h2> : 
             <div className='sub_costs'>
-              <h2>{discountCost}</h2>
-              <h3>{cost}</h3>
+              <h2>{discountCost} ₽</h2>
+              <h3>{cost} ₽</h3>
             </div>
             }
           </div>

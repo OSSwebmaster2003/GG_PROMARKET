@@ -81,7 +81,7 @@ function Footer(props) {
         </div>
         <div className="stock">
           <pre>Склад: Москва, ул. Салтыковская, 6 стр 11</pre>
-          <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox">zakaz@ggpromarket.ru</a>
+          <a href="https://gmail.com">zakaz@ggpromarket.ru</a>
         </div>
       </div>
       <div className="middle_footer">

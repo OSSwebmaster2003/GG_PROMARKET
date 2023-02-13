@@ -14,8 +14,8 @@ function SetProducts(props) {
               <img src={productDesc.img} alt="" />
               <div className="info">
                 <p>{productDesc.name}</p>
-                <h1>{productDesc.discountCost !== "no discount" ? productDesc.discountCost : productDesc.cost}</h1>
-                <h2>{productDesc.discountCost !== "no discount" && productDesc.cost}</h2>
+                <h1>{productDesc.discountCost !== "no discount" ? productDesc.discountCost : productDesc.cost}₽</h1>
+                <h2>{productDesc.discountCost !== "no discount" && productDesc.cost} ₽</h2>
               </div>
             </div>
             <div>
@@ -29,7 +29,7 @@ function SetProducts(props) {
           </div>
           <div className="second_part">
             <p>Стоимость комплекта</p>
-            <h1>{productDesc.discountCost === "no discount" ? `${productDesc.cost} + 2500 ₽` : `${productDesc.discountCost} + 2500 ₽` }</h1>
+            <h1>{productDesc.discountCost === "no discount" ? `${productDesc.cost + 2500}` : `${productDesc.discountCost + 2500}` } ₽</h1>
             <button>В КОРЗИНУ</button>
           </div>
         </div>
